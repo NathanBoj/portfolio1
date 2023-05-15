@@ -1,18 +1,58 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
 
 export default function Section1() {
+  const containerRef = useRef(null);
+  useEffect(() => {
+    let scene, renderer, camera;
+
+    // Initialize the scene
+    scene = new THREE.Scene();
+
+    // Initialize the renderer
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(containerRef.current.offsetWidth, containerRef.current.offsetHeight);
+    containerRef.current.appendChild(renderer.domElement);
+
+    // Initialize the camera
+    camera = new THREE.PerspectiveCamera(75, containerRef.current.offsetWidth / containerRef.current.offsetHeight, 0.1, 1000);
+    camera.position.z = 5;
+
+    // Load the glTF model
+    const loader = new GLTFLoader();
+    loader.load('/Assets/scene.glb', (gltf) => {
+      console.log(gltf); 
+      scene.add(gltf.scene);
+    });
+
+    // Animation loop
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      // Rotate the model
+      if (scene && scene.children.length > 0) {
+        scene.children[0].rotation.y += 0.01;
+      }
+
+      // Render the scene
+      renderer.render(scene, camera);
+    };
+
+    animate();
+
+    // Clean up
+    return () => {
+      // Dispose of the WebGL context
+      renderer.dispose();
+    };
+  }, []);
+
   return (
     <section id="Section1" className="bg-gray-100 min-h-screen py-10">
-      <div className="container mx-auto py-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">Section 1</h2>
-        <p className="text-lg text-gray-600 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat, ex ac faucibus feugiat, dui quam
-          iaculis elit, non lacinia magna mi vitae elit. Nulla pharetra, sapien ac ultricies ullamcorper, erat tortor
-          suscipit odio, vel laoreet velit justo sit amet sapien. Etiam eu nulla at urna dignissim lacinia. Ut
-          faucibus, est id mollis malesuada, purus odio dictum odio, vitae ultrices ante dolor vel sapien. Cras
-          scelerisque, eros vel malesuada bibendum, odio elit facilisis tortor, vel lacinia quam arcu ut metus.
-        </p>
-      </div>
+      <div ref={containerRef}></div>
     </section>
   );
+
 }
