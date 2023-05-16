@@ -1,42 +1,61 @@
 import React from 'react';
 
 export default function Section2() {
+
   const projects = [
     {
       id: 1,
       name: 'Smart Blinds',
       imageSrc: 'https://raw.githubusercontent.com/NathanBoj/Smart_Blinds/main/images/physical.jpg',
-      githubSrc: 'https://github.com/NathanBoj/Smart_Blinds',
+      color: 'bg-violet-400',
       description: 'These smart blinds can be controlled through a mobile app, allowing you to easily adjust lighting and temperature in your home. They utilize Arduino sensors to detect light levels and temperature, and employ Machine Learning to learn your preferences and automatically adjust the blinds based on your daily routine.',
-      url: 'https://project1-url.com',
+      url: 'https://github.com/NathanBoj/Smart_Blinds',
     },
     {
       id: 2,
       name: 'Self-Driving-Car',
       imageSrc: 'https://raw.githubusercontent.com/NathanBoj/Self-Driving-Car/main/assets/car1.gif',
-      githubSrc: 'https://github.com/NathanBoj/Self-Driving-Car',
+      color: 'bg-green-600',
       description: 'The idea behind this project is to explore the prospect of self-driving cars by creating a top-down 2-D car simulator. The goal is to let the car learn how to navigate itself using virtual distance sensors, neural networks and some aspects of genetic algorithms. The machine learning model used in this project is similar to reinforcement learning, where AI cars which go off track are stopped while ones that make it further can be saved and replicated.',
-      url: 'https://project2-url.com',
+      url: 'https://github.com/NathanBoj/Self-Driving-Car',
     },
     {
       id: 3,
       name: 'Password Manager Application',
       imageSrc: 'https://raw.githubusercontent.com/NathanBoj/Password_Manager/main/screenshots/login.jpg',
-      githubSrc: 'https://github.com/NathanBoj/Password_Manager',
+      color: 'bg-teal-500',
       description: 'With the growing number of online sites and services which all require you to have complex passwords, it can be tough to remember and keep track of so many different combinations. This project is aimed at creating a secure and user-friendly mobile application that will allow users to store their passwords and sensitive information in an encrypted format. The app will utilize strong encryption algorithms to ensure confidentiality, integrity, and authorization of user passwords, alongside removing the stress that comes with entering passwords.',
       url: 'https://github.com/NathanBoj/Password_Manager',
+    },
+    {
+      id: 4,
+      name: 'GeForce-RTX-40-Series-Website',
+      imageSrc: 'https://raw.githubusercontent.com/NathanBoj/GeForce-RTX-40-Series-Website/main/src/assets/images/1.png',
+      color: 'bg-red-400',
+      description: 'Mock website of Nvidia\'s Geforce RTX 40 Series Graphics Cards. Technologies utilized include ThreeJS, WebGi, & GSAP.',
+      url: 'https://github.com/NathanBoj/GeForce-RTX-40-Series-Website',
+    },
+    {
+      id: 5,
+      name: 'Face2Emote',
+      imageSrc: 'https://raw.githubusercontent.com/NathanBoj/Face2Emote/main/images/example.png',
+      color: 'bg-yellow-500',
+      description: 'Connect your webcam and Twitch to chat! Takes your webcams video stream and takes a picture every 10 seconds, deepface predicts your faces mood and uses TwitchIO to send a messages on behalf of your Twitch account.',
+      url: 'https://github.com/NathanBoj/Face2Emote',
     },
   ];
 
   return (
-    <section id="Section2" className="bg-gray-100 min-h-screen py-10">
+    <section id="Section2" className="min-h-screen py-12 bg-black">
       <div className="container mx-auto py-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">Exciting Projects</h2>
-        <div className="grid grid-cols-1 gap-8">
+      <h1 className="text-4xl font-bold">  
+            <span className="bg-gradient-to-r text-transparent bg-clip-text from-white to-orange-500 text-5xl">Exciting Projects</span>
+          </h1>
+        <div className="grid grid-cols-1 gap-8 py-5 ">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white rounded-lg p-6 flex flex-col lg:flex-row justify-start items-center relative"
+              className={`${project.color} rounded-lg p-6 flex flex-col lg:flex-row justify-start items-center relative`}
             >
               <div className="lg:w-1/3 lg:mr-8">
                 <div className="w-full h-64 relative">
@@ -45,7 +64,7 @@ export default function Section2() {
                     alt={`Project ${project.id}`}
                     className="rounded w-full h-full object-cover"
                   />
-                  <div onClick={() => window.open(project.githubSrc, '_blank')} className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-70 flex items-center justify-center transition-opacity duration-300">
+                  <div onClick={() => window.open(project.url, '_blank')} className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 hover:opacity-70 flex items-center justify-center transition-opacity duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-12 w-12 text-white opacity-90"
@@ -58,9 +77,9 @@ export default function Section2() {
                 </div>
               </div>
               <div className="lg:w-2/3">
-                <b><h1 className="text-lg text-gray-600 leading-relaxed mb-4">{project.name}</h1></b>
-                <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                <span className="ml-10">{project.description}</span>
+                <b><h1 className="text-lg text-black leading-relaxed mb-4 bold">{project.name}</h1></b>
+                <p className="text-lg text-black leading-relaxed mb-4">
+                  <span className="ml-10">{project.description}</span>
                 </p>
               </div>
             </div>

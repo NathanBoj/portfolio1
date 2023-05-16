@@ -50,12 +50,14 @@ export default function Section3() {
   };
 
   return (
-    <section id="Section3" className="bg-gray min-h-screen py-10">
+    <section id="Section3" className="min-h-screen py-12 bg-white">
       <div className="container mx-auto py-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">Contact Me!</h2>
-        <form onSubmit={sendEmail} className="max-w-md mx-auto">
+        <h1 className="text-4xl font-bold">
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl">Contact Me!</span>
+        </h1>
+        <form onSubmit={sendEmail} className="max-w-md mx-auto py-3">
           <div className="mb-4">
-            <label className="block text-lg text-gray-800 font-semibold mb-2">
+            <label className="block text-lg text-black font-semibold mb-2">
               Name
             </label>
             <input
@@ -67,7 +69,7 @@ export default function Section3() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg text-gray-800 font-semibold mb-2">
+            <label className="block text-lg text-black font-semibold mb-2">
               Email
             </label>
             <input
@@ -79,7 +81,7 @@ export default function Section3() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg text-gray-800 font-semibold mb-2">
+            <label className="block text-lg text-black font-semibold mb-2">
               Message
             </label>
             <textarea
@@ -93,7 +95,7 @@ export default function Section3() {
           <div className="text-center">
             <button
               type="submit"
-              className="hover:opacity-70 bg-black text-white rounded px-4 py-2 hover:bg-blue-600"
+              className="hover:bg-orange-500 bg-black text-white rounded px-4 py-2 hover:bg-blue-600"
             >
               Send Email
             </button>
@@ -111,6 +113,13 @@ export default function Section3() {
             </div>
           </div>
         )}
+      </div>
+      <div className="flex justify-center items-center">
+        <img
+          src="ghost.jpeg"
+          alt="Ghost"
+          className="rounded-md w-1/4 h-1/4 border-2 border-orange-500"
+        />
       </div>
     </section>
   );
