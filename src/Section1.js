@@ -7,7 +7,7 @@ function Section1() {
   return (
     <section id="Section1" className="h-screen bg-black py-12">
       <div className="relative container mx-auto py-12">
-        <h1 className="absolute top-100 left-400 text-6xl font-bold text-white">
+        <h1 className="absolute mt-20 ml-5 text-6xl font-bold text-white">
           Hello, I'm<br />
           <span className="bg-gradient-to-r text-transparent bg-clip-text from-white to-orange-500 text-8xl">Nathan</span>
         </h1>

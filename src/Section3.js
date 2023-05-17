@@ -64,7 +64,7 @@ export default function Section3() {
               type="text"
               id="name"
               name="user_name"
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+              className="focus:border-orange-500 w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
               required
             />
           </div>
@@ -76,7 +76,7 @@ export default function Section3() {
               type="email"
               id="email"
               name="user_email"
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+              className="focus:border-orange-500 w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
               required
             />
           </div>
@@ -88,14 +88,14 @@ export default function Section3() {
               id="message"
               name="message"
               rows={4}
-              className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+              className="focus:border-orange-500 w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
               required
             ></textarea>
           </div>
           <div className="text-center">
             <button
               type="submit"
-              className="hover:bg-orange-500 bg-black text-white rounded px-4 py-2 hover:bg-blue-600"
+              className="hover:opacity-70 shadow-lg shadow-orange-500 bg-black text-white rounded px-4 py-2"
             >
               Send Email
             </button>
@@ -118,7 +118,7 @@ export default function Section3() {
         <img
           src="ghost.jpeg"
           alt="Ghost"
-          className="rounded-md w-1/4 h-1/4 border-2 border-orange-500"
+          className="shadow-2xl  shadow-pink rounded-md w-1/6 h-1/6  "
         />
       </div>
     </section>
