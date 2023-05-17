@@ -4,4 +4,4 @@ Jupiter 3d model credit: https://sketchfab.com/3d-models/jupiter-c5275eb96af245e
 
 Live through GitHub-Pages: https://nathanboj.github.io/
 
-<img src= "https://github.com/NathanBoj/GeForce-RTX-40-Series-Website/blob/main/src/assets/images/gpu.gif" width=100% height=100%>
+<img src= "https://github.com/NathanBoj/portfolio1/blob/main/portfolio1.gif" width=100% height=100%>
