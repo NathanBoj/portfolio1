@@ -52,7 +52,7 @@ export default function Section3() {
   return (
     <section id="Section3" className="min-h-screen py-12 bg-white">
       <div className="container mx-auto py-12">
-        <h1 className="text-4xl font-bold">
+        <h1 className="ml-5 text-4xl font-bold">
           <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl">Contact Me!</span>
         </h1>
         <form onSubmit={sendEmail} className="max-w-md mx-auto py-3">
@@ -118,7 +118,7 @@ export default function Section3() {
         <img
           src="ghost.jpeg"
           alt="Ghost"
-          className="shadow-2xl  shadow-pink rounded-md w-1/6 h-1/6  "
+          className="shadow-2xl  shadow-pink rounded-md w-1/4 h-1/4  "
         />
       </div>
     </section>

@@ -55,8 +55,8 @@ export default function Section2() {
 
   return (
     <section id="Section2" className="min-h-screen py-12 bg-black">
-      <div className="container mx-auto py-12">
-        <h1 className="text-4xl font-bold">
+      <div className="mx-auto container py-12">
+        <h1 className="ml-5 text-4xl font-bold">
           <span className="bg-gradient-to-r text-transparent bg-clip-text from-white to-orange-500 text-5xl">Exciting Projects</span>
         </h1>
         <div className="container mx-auto py-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 ">

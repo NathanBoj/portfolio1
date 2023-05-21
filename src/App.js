@@ -10,7 +10,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a delay of 2 seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3000);
@@ -22,6 +21,7 @@ function App() {
     <>
       {isLoading ? (
         <div className="animate-bounce flex items-center justify-center h-screen font-bold">
+          <img className='w-6 h-6' src='/favicon.ico' alt='loading'></img>
           <p>Loading...</p>
         </div>
       ) : (
