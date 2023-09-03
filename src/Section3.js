@@ -50,14 +50,20 @@ export default function Section3() {
   };
 
   return (
-    <section id="Section3" className="min-h-screen py-12 bg-white">
-      <div className="container mx-auto py-12">
+    <section id="Section3" className="min-h-screen py-12 "
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/wall1.svg)`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }}>
+      <div className="container mx-auto py-12 mt-5">
         <h1 className="ml-5 text-4xl font-bold">
-          <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl">Contact Me!</span>
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-orange-500 to-white text-5xl flex items-center justify-center">Contact Me!</span>
         </h1>
         <form onSubmit={sendEmail} className="max-w-md mx-auto py-3">
           <div className="mb-4">
-            <label className="block text-lg text-black font-semibold mb-2">
+            <label className="block text-lg text-white font-semibold mb-2">
               Name
             </label>
             <input
@@ -69,7 +75,7 @@ export default function Section3() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg text-black font-semibold mb-2">
+            <label className="block text-lg text-white font-semibold mb-2">
               Email
             </label>
             <input
@@ -81,7 +87,7 @@ export default function Section3() {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-lg text-black font-semibold mb-2">
+            <label className="block text-lg text-white font-semibold mb-2">
               Message
             </label>
             <textarea

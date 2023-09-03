@@ -51,13 +51,27 @@ export default function Section2() {
       description: 'I developed a personal website portfolio with the aim of showcasing my skills, personal projects, and providing a means for contacting me. To create this portfolio, I leveraged the power of React, Tailwind CSS, and Three.js. These technologies allowed me to design an interactive and visually appealing platform to present my talents to potential visitors.',
       url: 'https://github.com/NathanBoj/portfolio1/tree/main',
     },
+    {
+      id: 7,
+      name: 'Euro Design',
+      imageSrc: './portfolio1.gif',
+      color: 'border-red-500',
+      description: 'filler',
+      url: 'https://github.com/NathanBoj/portfolio1/tree/main',
+    },
   ];
 
   return (
-    <section id="Section2" className="min-h-screen py-12 bg-black">
+    <section id="Section2" className="min-h-screen py-12"
+    style={{
+      backgroundImage: `url(${process.env.PUBLIC_URL}/wall2.svg)`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+  }}>
       <div className="mx-auto container py-12">
         <h1 className="ml-5 text-4xl font-bold">
-          <span className="bg-gradient-to-r text-transparent bg-clip-text from-white to-orange-500 text-5xl">Exciting Projects</span>
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl">Exciting Projects</span>
         </h1>
         <div className="container mx-auto py-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 ">
           {projects.map((project) => (

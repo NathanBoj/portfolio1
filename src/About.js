@@ -5,12 +5,18 @@ export default function About() {
 
 
     return (
-        <section id="About" className="py-12 bg-white min-h-screen">
+        <section id="About" className="py-12  min-h-screen"
+            style={{
+                backgroundImage: `url(${process.env.PUBLIC_URL}/wall1.svg)`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+            }}>
             <div className="flex flex-col justify-end py-12 mx-auto max-w-3xl">
 
                 <div className='mx-5'>
                     <h1 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl inline-block">
+                        <span className="bg-gradient-to-r text-transparent bg-clip-text from-white to-orange-500 text-5xl inline-block">
                             Overview
                         </span>
                         <svg className="w-10 h-10 mb-2 ml-2 inline-block" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -26,7 +32,7 @@ export default function About() {
                 </div>
                 <div className='mx-5'>
                     <h1 className="text-4xl font-bold mb-4">
-                        <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl inline-block">
+                        <span className="bg-gradient-to-r text-transparent bg-clip-text from-white to-orange-500 text-5xl inline-block">
                             Education
                         </span>
                         <svg className="w-10 h-10 mb-2 ml-2 inline-block" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -63,12 +69,31 @@ export default function About() {
                         <div className="mb-4">
                             <b>Technologies:</b>
                             <br />
-                            React.js, Node.js, Express.js, Three.js, CSS frameworks, Git, MySQL, Firebase, Android Studio, Arduino.
+                            AWS, React.js, Node.js, Express.js, Three.js, CSS frameworks, Git, MySQL, Firebase, Android Studio, Arduino.
                         </div>
                     </div>
 
 
                 </div>
+                <div className='mx-5 mb-6'>
+                    <h1 className="text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl inline-block">
+                            Certificates
+                        </span>
+                        <svg className="w-10 h-10 mb-2 ml-2 inline-block" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path clip-rule="evenodd" fill-rule="evenodd" d="M3 2.25a.75.75 0 01.75.75v.54l1.838-.46a9.75 9.75 0 016.725.738l.108.054a8.25 8.25 0 005.58.652l3.109-.732a.75.75 0 01.917.81 47.784 47.784 0 00.005 10.337.75.75 0 01-.574.812l-3.114.733a9.75 9.75 0 01-6.594-.77l-.108-.054a8.25 8.25 0 00-5.69-.625l-2.202.55V21a.75.75 0 01-1.5 0V3A.75.75 0 013 2.25z"></path>
+                        </svg>
+                    </h1>
+                    <div className='flex'>
+                        <div className="bg-black rounded-lg p-3 mx-2 hover:opacity-70 " onClick={() => window.open("https://www.parchment.com/u/award/eaa67b4714d34c5a80413c886b60a876", '_blank')}>
+                            <img src={`${process.env.PUBLIC_URL}/diploma.png`} alt='diploma' />
+                        </div>
+                        <div className="bg-black rounded-lg p-3 mx-2 hover:opacity-70" onClick={() => window.open("https://www.credly.com/badges/6d27ee5c-5e1c-48af-9122-0ab702e4db54/linked_in?t=ryocqq", '_blank')} >
+                            <img src={`${process.env.PUBLIC_URL}/ccp.png`} alt='ccp' />
+                        </div>
+                    </div>
+                </div>
+
                 <div className='mx-5'>
                     <h1 className="text-4xl font-bold mb-4">
                         <span className="bg-gradient-to-r text-transparent bg-clip-text from-black to-orange-500 text-5xl inline-block">
@@ -80,11 +105,10 @@ export default function About() {
                     </h1>
                     <div className="bg-black rounded-lg p-6 mx-auto mb-6">
                         <p className="indent-8 text-lg text-white leading-relaxed ">
-                        Outside of coding, I have a keen interest in various activities and subjects. I enjoy exploring space phenomena, delving into the world of computers, engaging in video and photo editing, exploring machine learning, and diving into worlds of video games such as Elden Ring.
+                            Outside of coding, I have a keen interest in various activities and subjects. I enjoy exploring space phenomena, delving into the world of computers, engaging in video and photo editing, exploring machine learning, and diving into worlds of video games such as Elden Ring.
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
     )
